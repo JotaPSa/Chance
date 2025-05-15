@@ -1,173 +1,149 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #e3f2fd;
-  color: #0d47a1;
-  overflow-x: hidden;
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 30px 20px;
-}
-
-.section {
-  display: none;
-  transition: all 0.5s ease-in-out;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.section.active {
-  display: block;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #0d47a1;
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-button {
-  margin-top: 20px;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #64b5f6;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-button:hover {
-  background-color: #42a5f5;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  /* removi position: relative para evitar conflito */
-}
-
-#yesBtn {
-  position: relative;
-  z-index: 2;
-}
-
-#noBtn {
-  position: relative; /* mudou de absolute para relative para não sobrepor */
-  max-width: 150px;
-  white-space: nowrap;
-  z-index: 10;
-  transition: transform 0.3s ease;
-  /* sem posição fixa para não quebrar o layout */
-}
-
-/* Tela final */
-.final-screen {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(to bottom, #bbdefb, #e3f2fd);
-  z-index: 999;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-.final-screen.show {
-  display: flex;
-}
-
-.romantic-overlay {
-  background-color: white;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
-  margin: 0 20px;
-}
-
-.romantic-overlay h2 {
-  color: #0d47a1;
-  font-size: 2em;
-}
-
-.romantic-overlay p {
-  color: #0d47a1;
-  font-size: 1.2em;
-  margin-top: 20px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* --- Responsividade --- */
-@media (max-width: 600px) {
-  .container {
-    max-width: 95%;
-    padding: 20px 15px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e3f2fd; /* azul pastel */
+    color: #0d47a1; /* azul escuro */
+    overflow-x: hidden;
   }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  button {
-    width: 100%;
-    padding: 14px 0;
-    font-size: 18px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  #noBtn {
-    width: 100%;
-    max-width: none;
-    padding: 12px 16px;
-  }
-
-  .romantic-overlay {
-    padding: 25px 15px;
-  }
-
-  .romantic-overlay h2 {
-    font-size: 1.6rem;
-  }
-
-  .romantic-overlay p {
-    font-size: 1rem;
-  }
-}
   
+  .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px 20px;
+  }
+  
+  .section {
+    display: none;
+    transition: all 0.5s ease-in-out;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section.active {
+    display: block;
+  }
+  
+  h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #0d47a1; /* azul profundo */
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #64b5f6; /* azul claro vibrante */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  button:hover {
+    background-color: #42a5f5;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .final-screen {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to bottom, #bbdefb, #e3f2fd);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .final-screen.show {
+    display: flex;
+  }
+  
+  .romantic-overlay {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0 20px;
+  }
+  
+  .romantic-overlay h2 {
+    color: #0d47a1;
+    font-size: 2em;
+  }
+  
+  .romantic-overlay p {
+    color: #0d47a1;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* --- Responsividade --- */
+  @media (max-width: 600px) {
+    .container {
+      max-width: 95%;
+      padding: 20px 15px;
+    }
+  
+    h1 {
+      font-size: 1.6rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 14px 0;
+      font-size: 18px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .romantic-overlay {
+      padding: 25px 15px;
+    }
+  
+    .romantic-overlay h2 {
+      font-size: 1.6rem;
+    }
+  
+    .romantic-overlay p {
+      font-size: 1rem;
+    }
+  }
