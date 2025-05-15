@@ -46,7 +46,6 @@ function substituirDatas() {
   });
 }
 
-// Botões "Sim" e "Não" com brincadeira
 window.onload = () => {
   substituirDatas();
   startTyping(document.querySelector(".section.active"));
@@ -65,19 +64,21 @@ window.onload = () => {
   noBtn.style.transition = "all 0.3s ease";
 
   noBtn.addEventListener("mouseenter", () => {
-    // Área visível do botão pai (div.buttons)
     const container = noBtn.parentElement;
-    const containerRect = container.getBoundingClientRect();
-    const btnRect = noBtn.getBoundingClientRect();
-
     const maxX = container.clientWidth - noBtn.offsetWidth;
     const maxY = container.clientHeight - noBtn.offsetHeight;
 
-    // Gera posições aleatórias dentro do container
     const newX = Math.random() * maxX;
     const newY = Math.random() * maxY;
 
     noBtn.style.left = `${newX}px`;
     noBtn.style.top = `${newY}px`;
+  });
+
+  // Para o botão voltar ao lugar original quando o mouse sair (opcional)
+  noBtn.addEventListener("mouseleave", () => {
+    noBtn.style.left = "50%";
+    noBtn.style.top = "60%";
+    noBtn.style.transform = "translate(-50%, -50%)";
   });
 };
