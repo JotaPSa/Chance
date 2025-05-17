@@ -7,38 +7,40 @@
   <link rel="stylesheet" href="Pedido.css" />
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="audio/musica.mp3" type="audio/mpeg">
+  <audio id="bgMusic" loop>
+    <source src="Jorge & Mateus - Pra Sempre Com Você (letras⧸lyrics).mp3" type="audio/mpeg">
     Seu navegador não suporta áudio.
   </audio>
 
-  <div class="container">
     <section class="section active">
-      <h1 class="typing" data-text="Essa é a nossa história..."></h1>
-      <button onclick="showNext(1)">Clique para começar</button>
+      <h1 class="typing" data-text="Entre reuniões, conversas rápidas e momentos comuns no trabalho, uma conexão inesperada começou a se formar. Sem perceber, nossos caminhos começaram a se cruzar cada vez mais — como se o destino tivesse um plano silencioso para nós. E foi então que um simples acaso se transformou no início de algo extraordinário."></h1>
+      <button onclick="showNext(1)">Próximo</button>
     </section>
 
     <section class="section">
       <h2>Capítulo 1: O Encontro</h2>
-      <p class="typing" data-text="No meio da rotina, entre risos tímidos e olhares curiosos, nos encontramos ao acaso. Mas foi em 08 de março de 2025 que nossos caminhos realmente se entrelaçaram. Desde então, já se passaram [[tempoConhecimento]] dias... e cada um deles tem sido mais bonito com você."></p>
+      <p class="typing" data-text="A verdade é que nos conhecemos aos poucos, quase sem perceber. Entre olhares trocados no trabalho, um dia especial fez tudo mudar de vez. Aquele encontro mudou tudo, fui sem imaginar que aquela momento renderia tanto. As horas passaram voando, como se o tempo não importasse mais. A leveza do seu jeito, a forma como falava, me fizeram querer te conhecer cada vez mais. 
+      Desde aquele dia, já se passaram [[tempoConhecimento]] dias... e ainda sinto o mesmo desejo: descobrir mais de você, viver mais ao seu lado e continuar me perdendo na melhor parte da minha rotina: nós."></p>
       <button onclick="showNext(2)">Próximo</button>
     </section>
 
     <section class="section">
       <h2>Capítulo 2: Nossos Momentos</h2>
-      <p class="typing" data-text="Me lembro da adrenalina do kart, das caminhadas de mãos dadas no shopping, da viagem até Manacapuru e até das nossas compras simples no mercado. São detalhes, mas em cada um deles tem algo que os faz especiais: VOCÊ."></p>
+      <p class="typing" data-text="A vida ao seu lado é feita de detalhes que viraram memórias eternas. A adrenalina das nossas corridas de kart, a tranquilidade das caminhadas de mãos dadas no shopping, a viagem até Manacapuru que, apesar de simples, ficou guardada no meu coração. Até aquelas idas ao mercado, que poderiam ser rotinas, ganharam cor, carinho e significado.
+      Em pouco tempo, construímos uma conexão que vai além dos momentos felizes — aprendemos a estar presentes um para o outro, compartilhando apoio, cuidado e confiança. É essa cumplicidade, silenciosa mas forte, que torna cada instante ainda mais especial.
+      Em cada gesto, havia algo que tornava tudo único: o seu sorriso, seu abraço, sua presença… você."></p>
       <button onclick="showNext(3)">Próximo</button>
     </section>
 
     <section class="section">
       <h2>Capítulo 3: Nosso Primeiro Beijo</h2>
-      <p class="typing" data-text="Em 05 de abril de 2025, nossos lábios se encontraram pela primeira vez. Foi como se o tempo tivesse parado por um instante. E cada beijo desde aquele tem sido como um novo começo."></p>
+      <p class="typing" data-text="Nosso primeiro beijo foi um instante breve, cheio daquele nervosismo gostoso que só o coração acelerado sabe explicar. A vontade estava lá, misturada com a timidez, criando um momento doce e único, em que tudo parecia novo e cheio de significado. Foi simples, mas inesquecível — um passo natural que marcou o começo de algo que a gente queria muito construir, cheio de carinho e vontade de estar sempre mais perto."></p>
       <button onclick="showNext(4)">Próximo</button>
     </section>
 
     <section class="section">
       <h2>Capítulo 4: O que você significa pra mim</h2>
-      <p class="typing" data-text="Desde que você entrou na minha vida, tudo ganhou mais cor, mais calma, mais sentido. Você me inspira, me fortalece, me completa. Com você, aprendi a sorrir com o coração e a sonhar de olhos abertos. Quero te acompanhar nos dias bons, e te abraçar nos dias difíceis. Caminhar ao seu lado em cada passo dessa vida."></p>
+      <p class="typing" data-text="Desde que você entrou na minha vida, tudo ganhou cor, calma e sentido que eu nunca imaginei. Você iluminou os meus dias incertos, trouxe paz onde havia inquietação e uma alegria que eu nem sabia que podia sentir tão intensamente. Você me inspira a ser uma pessoa melhor, me fortalece silenciosamente e me completa de um jeito só nosso. Com você, aprendi a sorrir com o coração e a sonhar acordado, porque o futuro ao seu lado é a promessa mais bonita que eu poderia querer. Quero caminhar ao seu lado a cada dia — celebrando vitórias, enfrentando desafios e transformando cada instante em uma memória que vale a vida inteira. Estar com você é meu lugar favorito no mundo."></p>
       <button onclick="showNext(5)">Próximo</button>
     </section>
 
@@ -54,7 +56,7 @@
     <div id="final-screen" class="final-screen hidden">
       <div class="romantic-overlay">
         <h2>❤ Você disse sim! ❤</h2>
-        <p>Agora vai ter que me aguentar para sempre!</p>
+        <p>Agora é para sempre, vai ter que me aguentar!</p>
       </div>
     </div>
   </div>
