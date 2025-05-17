@@ -9,16 +9,6 @@ function showNext(index) {
     });
   }
 
-<script>
-  window.addEventListener('load', () => {
-    const music = document.getElementById('bgMusic');
-    // tentativa extra de iniciar o áudio
-    music.play().catch((error) => {
-      console.log("Autoplay bloqueado pelo navegador. A música tocará após a primeira interação.");
-    });
-  });
-</script>
-
   function startTyping(section) {
     const elements = section.querySelectorAll(".typing");
     elements.forEach(el => {
